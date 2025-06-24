@@ -1,0 +1,133 @@
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tableHeader {
+  background-color: #f8f9fa;
+  color: #495057;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.tableHeader th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.tableRow:hover, .tableRow:focus {
+  background-color: #e8e8e8;
+  cursor: pointer;                    
+  outline: 0px solid transparent;
+}
+
+.tableRow td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.nameCell {
+  font-weight: 500;
+}
+
+.emailCell {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.actionCell {
+  text-align: center;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.link {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .tableHeader th,
+  .tableRow td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .tableHeader th,
+  .tableRow td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .emailCell {
+    font-size: 0.75rem;
+  }
+} 
