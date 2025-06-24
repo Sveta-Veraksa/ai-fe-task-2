@@ -19,6 +19,8 @@ This application displays user data in a table format with the following feature
 - **Vite** - Build tool and development server
 - **CSS Modules** - Scoped styling
 - **Modern CSS** - Responsive design with CSS variables and modern layout techniques
+- **Vitest** - Unit and integration testing
+- **Testing Library** - Component testing utilities
 
 ## Project Structure
 
@@ -27,16 +29,18 @@ src/
 ├── components/
 │   ├── UsersTable/
 │   │   ├── UsersTable.tsx       # Table component for displaying users
-│   │   └── UsersTable.module.css # Styles for the table component
+│   │   ├── UsersTable.module.css # Styles for the table component
+│   │   └── __tests__/           # Tests for the UsersTable component
 │   └── UserDetails/
 │       ├── UserDetails.tsx      # Modal component for user details
-│       └── UserDetails.module.css # Styles for the modal component
+│       ├── UserDetails.module.css # Styles for the modal component
+│       └── __tests__/           # Tests for the UserDetails component
 ├── services/
-│   └── api.ts                   # API service for fetching user data
+│   ├── api.ts                   # API service for fetching user data
+│   └── __tests__/               # Tests for API services
 ├── types/
 │   └── index.ts                 # TypeScript interfaces
-├── styles/
-│   └── (global styles)          # Global styles
+├── __tests__/                   # Application-level tests
 ├── App.tsx                      # Main application component
 ├── App.css                      # App-specific styles
 ├── main.tsx                     # Application entry point
@@ -109,6 +113,42 @@ CSS features used:
 - Flexbox and Grid for layouts
 - Media queries for responsive adjustments
 - Modern CSS best practices
+
+## Testing
+
+The application includes comprehensive tests:
+
+### Unit Tests
+- Component tests for UsersTable and UserDetails
+- API service tests for data fetching
+- Proper mocking of external dependencies
+
+### Integration Tests
+- End-to-end tests for the main application flow
+- Tests for user interactions like clicking, keyboard navigation
+- Tests for error handling and loading states
+
+### Test Coverage
+
+The test suite covers:
+- Component rendering and behavior
+- User interactions (clicks, keyboard navigation)
+- API service functionality
+- Error handling and edge cases
+- Accessibility features
+
+### Running Tests
+
+```bash
+# Run tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
 
 ## Getting Started
 
